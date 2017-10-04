@@ -1,0 +1,113 @@
+
+{{!-- <h1>Dynamic Items</h1>
+<h6>There are {{product.length}} posts</h6> --}}
+{{#each product}}
+<div class="row">
+        <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+            <img src= '/uploads/{{imagePath}}' />
+            <div class="caption">
+                <h3>{{title}}</h3>
+                <p class="description">{{description}}</p>
+                <div class="clearfix">
+                    <div class="price pull-left">${{price}}</div>
+                    <a href="/shopping/checkout/" class="btn btn-success pull-right" role="button">Add to cart</a>
+                    <a href="/shopping/items/{{_id}}" class="btn btn-success pull-right" role="button">info</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>
+<hr>
+
+
+
+{{!-- 
+<div class="row">
+    <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+            <img src="https://d3ieicw58ybon5.cloudfront.net/ex/610.610/u/789ca63b68d34e86be3c1899064ca71d.jpg" alt="..." class="img-responsive">
+            <div class="caption">
+                <h3>Konosuba Darkness Figurine</h3>
+                <p class="description"></p>
+                <p>If you sing the OP of the song the final boss will come and call you a pussy</p>
+                <div class="clearfix">
+                    <div class="price pull-left">$25.00 USD</div>
+                    <a href="#" class="btn btn-success pull-right" role="button">Button</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+            <img src="https://i.ytimg.com/vi/nNDPhce4ndE/maxresdefault.jpg" alt="..." class="img-responsive">
+            <div class="caption">
+                <h3>One vacuum sealed fart from her</h3>
+                <p class="description"></p>
+                <p>This creature comes out her NEET hole once a year</p>
+                <h6>Product is said to resemble opening a bag of hot cheetos</h6>
+                <div class="clearfix">
+                    <div class="price pull-left">Price = One lamborghini</div>
+                    <a href="#" class="btn btn-success pull-right" role="button">Button</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+            <img src="https://images.lookhuman.com/render/standard/hZ6X54jeWRseN0hKNeIjpXGLi5Ci4HTj/3600-white-z1-t-forever-a-weeb.png" alt="..." class="img-responsive">
+            <div class="caption">
+                <h3>Buy the shirt, let's be real.</h3>
+                <p class="description"></p>
+                <div class="clearfix">
+                    <div class="price pull-left">1 ethereum</div>
+                    <a href="#" class="btn btn-success pull-right" role="button">Button</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+            <img src="https://rlv.zcache.com/space_doge_shibe_wow_doge_poster-r49d3ff7157d54cde97b2d3071d208939_wvx_8byvr_324.jpg" alt="..." class="img-responsive">
+            <div class="caption">
+                <h3>Much content</h3>
+                <p class="description"></p>
+                <div class="clearfix">
+                    <div class="price pull-left">$0.50 USD</div>
+                    <a href="#" class="btn btn-success pull-right" role="button">Button</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+            <img src="https://rlv.zcache.com/space_doge_shibe_wow_doge_poster-r49d3ff7157d54cde97b2d3071d208939_wvx_8byvr_324.jpg" alt="..." class="img-responsive">
+            <div class="caption">
+                <h3>Much content!!!</h3>
+                <p class="description"></p>
+                <div class="clearfix">
+                    <div class="price pull-left">$0.50 USD</div>
+                    <a href="#" class="btn btn-success pull-right" role="button">Button</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+            <img src="https://i.ytimg.com/vi/UVAUcANaJP8/maxresdefault.jpg" alt="..." class="img-responsive">
+            <div class="caption">
+                <h3>Woah content~</h3>
+                <h4>woah woah woah woah</h4>
+                <p class="description"></p>
+                <div class="clearfix">
+                    <div class="price pull-left">$0.50 USD</div>
+                    <a href="#" class="btn btn-success pull-right" role="button">Button</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> --}}
