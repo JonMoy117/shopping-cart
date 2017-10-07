@@ -4,8 +4,6 @@ var Product = require('../models/product');
 var multer = require('multer');
 var upload = multer({ dest: 'public/uploads/' });
 
-
-
 /* GET home page. */
 router.get('/', function(req, res, next) {
   Product.find({},function(err, product) {
@@ -16,7 +14,7 @@ router.get('/', function(req, res, next) {
     
   })
 
-  console.log("hi im here")
+  console.log("hi im here");
 });
 
 

@@ -1,16 +1,27 @@
 
 {{!-- <h1>Dynamic Items</h1>
 <h6>There are {{product.length}} posts</h6> --}}
+
 {{#each product}}
-<div class="row">
-        <div class="col-sm-6 col-md-4">
+<div class="something">
+    ahhhh this is something
+        <div class="whatever">
+            ahh this is whatever
         <div class="thumbnail">
-            <img src= '/uploads/{{ this.imagePath }}' />
-            <div class="caption">
+            ahh thumbnail
+            <img src= '/uploads/{{imagePath}}' />
+            ahh img
+            <div class="caption"> Some Product yo
+                <div> 
+                    Text within caption class
+                    <h5>yooo</h5>
+                    <h5>yooo</h5>
+                    <h5>lool</h5>
+                </div>
                 <h3>{{title}}</h3>
-                <p class="description">{{ this.description}}</p>
+                <p class="description">{{description}}</p>
                 <div class="clearfix">
-                    <div class="price pull-left">${{ this.price}}</div>
+                    <div class="price">${{price}}</div>
                     <a href="/shopping/checkout/" class="btn btn-success pull-right" role="button">Add to cart</a>
                     <a href="/shopping/items/{{_id}}" class="btn btn-success pull-right" role="button">info</a>
 
