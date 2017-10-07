@@ -3,7 +3,6 @@
 <h6>There are {{product.length}} posts</h6> --}}
 {{#each product}}
 <div class="row">
-    {{#each this }}
         <div class="col-sm-6 col-md-4">
         <div class="thumbnail">
             <img src= '/uploads/{{ this.imagePath }}' />
@@ -21,7 +20,6 @@
     </div>
     {{/each}}
 </div>
-{{/each}}
 
 
 

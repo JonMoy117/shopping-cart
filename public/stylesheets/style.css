@@ -1,0 +1,47 @@
+.img {
+  max-height: 50%;
+}
+
+.thumbnail {
+  background-color: black;
+}
+
+.row {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: space-between;
+  flex-direction: column;
+
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.caption {
+  text-align: center;
+}
+
+.description {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.p {
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+}
+
+.h3 {
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}

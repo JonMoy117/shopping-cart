@@ -3,22 +3,22 @@ var router = express.Router();
 var Product = require('../models/product');
 var multer = require('multer');
 var upload = multer({ dest: 'public/uploads/' });
-var sass = require('node-sass');
 
-sass.render({
-  file: "style.css"
-}, function(err, result) {  });
 
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  Product.find({}, function(err, product) {
+  Product.find({},function(err, product) {
     res.render('shop/index', { 
       product: product
+
     });
     
   })
+
+  console.log("hi im here")
 });
+
 
 router.get('/shopping/items/add', function(req, res) {
   res.render('shop/add_item')
