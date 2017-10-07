@@ -2,91 +2,86 @@ $primary-color: black;
 $secondary-color: purple;
 
 body {
-  background-color:orange;
+  background-color: orange;
   display: flex;
   flex-direction: column;
   justify-content: center;
+
 }
-  
+
 .whatever {
   height: 100%;
   width: 100%;
   display: flex;
   flex-flow: column;
-  align-items: center;
+  align-items: center; }
 
-}
 .something {
-
   display: flex;
   flex-flow: column;
-  align-items: center;
-}
+  align-items: center; }
 
 .container {
-  background-color:red;
-}
+  background-color: crimson; }
 
 .thumbnail {
-  background-color:$secondary-color;
+  background-color: purple;
+  color: white;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   height: 100%;
-  width: 100%;
+  width: 100%; }
+
+.body {
+  max-height: 100%;
+  max-width: 100%; }
+
+.something {
+  display: flex;
+  background-color: lime; }
+
+.caption {
+  background-color: white;
+  border-color: yellow;
+  border-style: double;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 h5 {
-  background-color: yellowgreen;
-  color:crimson;
+  background-color:#2BFF00;
+  color: blue;
 }
-
-.caption {
-  background-color: cyan;
-  width: 100%;
-  height: 100%;
-}
-.body {
-  max-height: 100%;
-  max-width: 100%;
-}
-.something {
-  display: flex;
-  background-color: lime;
-}
-
 
 .description {
   display: flex;
   justify-content: flex-end;
-  align-items: center;
-  background-color: blue;
-}
+  align-items: flex-end;
+  background-color: blue; }
 
 .price {
-  background-color: #EEE3E3;
-  color: #070705;
+  background-color: white;
+  color: crimson;
   display: flex;
-  flex-direction: row-reverse;
-  height: 5vh;
-  margin-right: 2.5%;
+  flex-direction: column;
+  align-content: center;
+  height: 5vh;}
 
-
-
-}
-
-@media (max-height: 500px){
-.thumbnail {
-  flex-flow: column;
-  background-color: green;
-}
-}
-
-@media (max-width: 500px){
+@media (max-height: 500px) {
   .thumbnail {
     flex-flow: column;
+    justify-content: space-between;
     background-color: green;
-    transition: .5s;
-  }
-  }
-  
+    transition: .2; } }
+
+@media (max-width: 500px) {
+  .thumbnail {
+    flex-flow: column;
+    justify-content: space-between;
+    background-color: green;
+    transition: .2s; } }
