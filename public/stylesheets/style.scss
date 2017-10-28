@@ -6,16 +6,19 @@ body {
   flex-direction: column;
   justify-content: center;
   background-color: orangered;
+  max-width: 100%;
 
 }
 
 .photo {
-  height: 100vh;
-  width: 100vw;
+  height: 70vh;
+  width: 150vw;
   max-height: 100%;
   max-width: 100%;
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  flex-shrink: 1;
 }
 
 .whatever {
@@ -43,13 +46,17 @@ body {
   background-color: crimson; }
 
 .thumbnail {
-  background-color: purple;
+  background-color: yellowgreen;
   color: white;
   display: flex;
+  flex-direction: row;
   align-items: flex-end;
   justify-content: center;
-  height: 100%;
-  width: 100%; }
+  height: 70vh;
+  width: 150vw;
+  max-width: 100%;
+ }
+
 
 .body {
   max-height: 100%;
@@ -63,7 +70,7 @@ body {
   border-radius: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   text-align: center;
 }

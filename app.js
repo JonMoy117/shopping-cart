@@ -5,13 +5,19 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var expressHbs = require('express-handlebars');
+var session = require('express-session');
+var passport = require('passport');
+var flash = require('connect-flash');
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/shopping')
+mongoose.connect('mongodb://localhost/shopping');
+require('./config/passport');
+
+
 var db = mongoose.connection;
 
 db.open(function() {
   console.log('connected to db')
-})
+});
 
 var routes = require('./routes/index');
 
@@ -27,6 +33,10 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(session({secret: 'supersecret', resave: false, saveUninitialized: false}));
+app.use(flash());
+app.use(passport.initialize());
+app.use(passport.session());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);

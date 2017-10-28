@@ -3,6 +3,12 @@ var router = express.Router();
 var Product = require('../models/product');
 var multer = require('multer');
 var upload = multer({ dest: 'public/uploads/' });
+var csrf = require('csurf');
+var passport = require('passport');
+
+
+var csrfProtection = csrf();
+router.use(csrfProtection);
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -17,6 +23,23 @@ router.get('/', function(req, res, next) {
   console.log("hi im here");
 });
 
+router.get('/sign_up', function (req, res, next){
+  res.render('user/signup', {csrfToken: req.csrfToken()});
+});
+
+router.post('/sign_up', passport.authenticate('local.signup', {
+    successRedirect: '/profile',
+    failureRedirect: '/sign_up',
+    failureFlash: true,
+  }));
+
+router.get('/profile', function(req, res, next){
+  res.render('user/profile');
+});
+
+router.get('/hello', function(req,res,next){
+  res.json(req.body);
+})
 
 router.get('/shopping/items/add', function(req, res) {
   res.render('shop/add_item')
