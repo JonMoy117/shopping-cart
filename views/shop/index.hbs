@@ -1,21 +1,48 @@
 
+
+
 {{!-- <h1>Dynamic Items</h1>
 <h6>There are {{product.length}} posts</h6> --}}
 
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 {{#each product}}
-<div class="something">
+<div class="row">
     ahhhh this is something
-        <div class="whatever">
-            ahh this is whatever
-        <div class="thumbnail">
-            ahh thumbnail
-            <p class="photo"><img src= '/uploads/{{imagePath}}' />
-            </p>
-            ahh thumnail also???
-            <div class="caption"> Some Product yo
+        <div class="row">
+  <div class="col-sm-4">.col-sm-4</div>
+  <div class="col-sm-4">.col-sm-4</div>
+            <!-- brand and toggle get grouped for better mobile display -->
+        <div class="rowframe">
+            <div class="photoborder"><img src= '/uploads/{{imagePath}}' />
+            <div class="infobox"> Some Product yo
                 <div id = 'h5'> 
                     Text within caption class
-                    <h5>yooo</h5>
+                    <h5>{{this.product:id}}hiii</h5>
                     <h5>yooo</h5>
                     <h5>lool</h5>
                 </div>
@@ -35,7 +62,7 @@
 
 
 
-{{!-- 
+{{!--   
 <div class="row">
     <div class="col-sm-6 col-md-4">
         <div class="thumbnail">

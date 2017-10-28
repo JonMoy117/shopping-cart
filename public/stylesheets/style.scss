@@ -1,56 +1,78 @@
 $primary-color: black;
 $secondary-color: purple;
 
-body {
+.thumbnail {
+  color: blue;
+  background-color:blue;
+}
+
+.body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: rgb(115, 255, 0);
+  max-width: 100%;
+}
+
+.infobox {
+  background-color: gray;
+  border-color: rgb(196, 7, 7);
+  border-style: double;
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
+  text-align: center;
+  height: 50vh;
+  width: 50vw; }
+
+div.row {
+  display: flex;
+  flex-direction: row;
   justify-content: center;
-  background-color: orangered;
   max-width: 100%;
+  color:rgb(33, 20, 207);
+  background-color:rgb(2, 2, 15);
 
 }
 
-.photo {
-  height: 70vh;
-  width: 150vw;
-  max-height: 100%;
-  max-width: 100%;
-  margin: 0px;
-  padding: 0px;
+div.rowframe {
   display: flex;
-  flex-shrink: 1;
+  flex-direction: row;
+  justify-content: center;
+  max-width: 100%;
+}
+div.photoborder {
+  max-width: 100%;
+  background-color: blue;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
-.whatever {
-  height: 100%;
-  width: 100%;
+div.col-sm-4 {
+  color: limegreen;
+  background-color: purple;
   display: flex;
-  flex-flow: column;
-  align-items: center; }
-
-.something {
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  color: white;
+  flex-direction: row;
   max-width: 100%;
-  max-height: 100%;
-  background-image: repeating-linear-gradient(-30deg,
-  transparent 2%,
-  transparent 2%,
-  orangered 20px,
-  black 40px);
+  justify-content: space-around;
+  align-content: center;
 }
 
-.container {
-  background-color: crimson; }
 
-.thumbnail {
+div.container {
+  color: red;
+  
+ }
+
+.photo  {
   background-color: yellowgreen;
   color: white;
   display: flex;
   flex-direction: row;
-  align-items: flex-end;
+  align-items: flex-start;
   justify-content: center;
   height: 70vh;
   width: 150vw;
@@ -58,22 +80,17 @@ body {
  }
 
 
-.body {
+body {
   max-height: 100%;
-  max-width: 100%; }
+  max-width: 100%;
+  background-color: blue;
+  color: rgb(4, 4, 8);
 
 
-.caption {
-  background-color: white;
-  border-color: yellow;
-  border-style: double;
-  border-radius: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  text-align: center;
 }
+
+
+
 
 h5 {
   background-color:#2BFF00;

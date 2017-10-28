@@ -23,8 +23,9 @@ router.get('/', function(req, res, next) {
   console.log("hi im here");
 });
 
-router.get('/sign_up', function (req, res, next){
+router.get('user/sign_up', function (req, res, next){
   res.render('user/signup', {csrfToken: req.csrfToken()});
+  console.log("user sign up route");
 });
 
 router.post('/sign_up', passport.authenticate('local.signup', {
@@ -33,7 +34,7 @@ router.post('/sign_up', passport.authenticate('local.signup', {
     failureFlash: true,
   }));
 
-router.get('/profile', function(req, res, next){
+router.get('user/profile', function(req, res, next){
   res.render('user/profile');
 });
 

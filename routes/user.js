@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var passport = require('passport');
+var csrf = require('csurf');
 
 router.use(function (req, res, next) {
     res.locals.login = req.isAuthenticated();
@@ -12,8 +13,8 @@ router.get('/sign_up', function(req, res, next) {
     res.render('user/signup', {hasErrors: messages.length > 0, messages: messages});
 });
 
-router.post('/sig_nup', passport.authenticate('local.signup', {
-    successRedirect: '/profile',
+router.post('/sign_up', passport.authenticate('local.signup', {
+    successRedirect: '/signup',
     failureRedirect: '/signup',
     failureFlash: true
 }));
