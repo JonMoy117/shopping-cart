@@ -19,7 +19,7 @@ db.open(function() {
   console.log('connected to db')
 });
 
-var routes = require('./routes/index');
+var routes = require('./routes');
 
 var app = express();
 
@@ -39,7 +39,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', routes);
+app.use(routes);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

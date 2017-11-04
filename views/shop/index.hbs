@@ -32,30 +32,12 @@
 
 {{#each product}}
 <div class="row">
-    ahhhh this is something
-        <div class="row">
-  <div class="col-sm-4">.col-sm-4</div>
-  <div class="col-sm-4">.col-sm-4</div>
-            <!-- brand and toggle get grouped for better mobile display -->
-        <div class="rowframe">
-            <div class="photoborder"><img src= '/uploads/{{imagePath}}' />
-            <div class="infobox"> Some Product yo
-                <div id = 'h5'> 
-                    Text within caption class
-                    <h5>{{this.product:id}}hiii</h5>
-                    <h5>yooo</h5>
-                    <h5>lool</h5>
-                </div>
-                <h3>{{title}}</h3>
-                <p class="description">{{description}}</p>
-                <div class="clearfix">
-                    <div class="price">${{price}}</div>
-                    <a href="/shopping/checkout/" class="btn btn-success pull-right" role="button">Add to cart</a>
-                    <a href="/shopping/items/{{_id}}" class="btn btn-success pull-right" role="button">info</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <h1>Category: </h1>
+        <h1>{{description}}</h1>
+    <div class="row1">
+        <div class="col-sm-3"><h2>{{title}}</h2></div>
+        <div class="col-sm-3"><h3>${{price}}</h3></div>
+        <p class="photo"><img src= '/uploads/{{imagePath}}'/></p>
     </div>
     {{/each}}
 </div>
