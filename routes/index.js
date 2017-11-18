@@ -1,15 +1,15 @@
 var express = require('express');
 var router = express.Router();
 var Product = require('../models/product');
-var csrf = require('csurf');
+//var csrf = require('csurf');
 var passport = require('passport');
 
 router.use('/user', require('./user'))
 router.use('/shopping', require('./shopping'))
 
 
-var csrfProtection = csrf();
-router.use(csrfProtection);
+//var csrfProtection = csrf();
+//router.use(csrfProtection);
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -21,7 +21,7 @@ router.get('/', function(req, res, next) {
     
   })
 
-  console.log("hi im here");
+  //console.log("hi im here");
 });
 router.post('/sign_up', passport.authenticate('local.signup', {
     successRedirect: '/profile',

@@ -8,6 +8,7 @@ var expressHbs = require('express-handlebars');
 var session = require('express-session');
 var passport = require('passport');
 var flash = require('connect-flash');
+var validator = require('express-validator');
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/shopping');
 require('./config/passport');
@@ -23,6 +24,9 @@ var routes = require('./routes');
 
 var app = express();
 
+//import model
+var User = require('./models/user')
+
 // view engine setup
 app.engine('.hbs', expressHbs({defaultLayout: 'layout', extname: '.hbs'}));
 app.set('view engine', '.hbs');
@@ -32,12 +36,32 @@ app.set('view engine', '.hbs');
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(validator());
 app.use(cookieParser());
 app.use(session({secret: 'supersecret', resave: false, saveUninitialized: false}));
 app.use(flash());
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(function(req, res, next) {
+  res.locals.login = req.isAuthenticated()
+  res.locals.session = req.session
+  next()
+})
+
+app.use(function(req, res, next) {
+  if(res.locals.login) {
+      User.findOne({_id: res.locals.session.passport.user}, function(err, user) {
+          res.locals.signedInUser = user
+          next()
+      })  
+  } else {
+    next()
+  }
+})
+
+
 
 app.use(routes);
 
@@ -71,6 +95,7 @@ app.use(function(err, req, res, next) {
     error: {}
   });
 });
+
 
 
 module.exports = app;

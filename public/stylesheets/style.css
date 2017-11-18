@@ -1,19 +1,16 @@
-.thumbnail {
-  color: blue;
-  background-color: blue; }
-
 #body {
   margin: 0;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #212529;
+  color: #55992e;
   text-align: center;
   background-color: #653086;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  background-color: brown; }
+  background-color: brown;
+  align-items: center; }
 
 img {
   width: 30vw;
@@ -24,28 +21,26 @@ img {
   flex-flow: row;
   justify-content: flex-end; }
 
-.infobox {
-  background-color: gray;
-  border-color: #c40707;
-  border-style: double;
-  border-radius: 20px;
+div.toprow {
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: flex-end;
-  text-align: center;
-  height: 50vh;
-  width: 50vw; }
+  flex-flow: wrap;
+  justify-content: space-evenly;
+  max-width: 100%;
+  width: 100vw;
+  color: #6b14cf;
+  background-color: #02020f;
+  margin: 0;
+  flex-direction: row;
+  text-align: center; }
 
 div.row {
   display: flex;
-  flex-flow: wrap;
-  justify-content: center;
+  flex-flow: column;
+  justify-content: space-evenly;
   max-width: 100%;
   width: 70vw;
   color: #6b14cf;
   background-color: #02020f;
-  justify-items: left;
   margin: 0;
   align-self: center; }
 
@@ -59,43 +54,10 @@ div.row1 {
   border-width: 10px;
   text-align: center; }
 
-div.rowframe {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 60vw;
-  max-width: 100%; }
-
-div.photoborder {
-  max-width: 100%;
-  background-color: blue;
-  display: flex;
-  flex-direction: row;
-  justify-content: center; }
-
-div.container {
-  text-align: center;
-  background-color: orange;
-  display: flex;
-  flex-flow: column;
-  border-style: solid;
-  border-color: darkturquoise;
-  -webkit-border-after-style: double;
-  -webkit-border-after-width: thick;
-  -webkit-border-after-color: brown; }
-
 div.container1 {
-  display: flex;
-  color: #1100ff;
-  background-color: white;
-  flex-direction: column;
-  border-style: dashed;
-  align-items: center;
-  width: 100vw;
-  height: 100vh;
-  max-width: 70%;
-  padding-left: 30%; }
+  border-color: yellow;
+  border-style: double; }
 
-h5 {
+h1 {
   background-color: #2BFF00;
   color: blue; }
